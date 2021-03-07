@@ -1,0 +1,192 @@
+\documentclass[landscape]{scrartcl}
+\usepackage{cmap}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\geometry{
+		top=3cm,
+		bottom=2cm,
+		right=2cm,
+		left=3cm
+		}
+\begin{document}
+	\begin{center}
+		\Large\textbf{Elliptik silindrning elektr maydoni}
+		
+		\textit{Yomg`irov Olim}\\
+		Mirzo Ulug`bek nomidagi O`zbekiston Milliy Universiteti\\
+		Fizika fakulteti\\
+		\texttt olimyomgirov1284@gmail.com
+	\end{center}
+	\pagestyle{empty}
+	\pagestyle{fancy}
+	
+	
+	
+	
+	
+	Cheksiz uzun silindr sirti bo`ylab zaryadlar bir jinsli taqsimlangan bo`lsin. Zaryadlarning sirt zichligi $\rho$. Shu bir jinsli cheksiz uzun silindr sirtidagi elektr maydonini hisoblaymiz.
+	Ellipsning x va z o`qlari bo`yicha yarim o`qlari a va b ga teng deylik. U holda, zaryadlar hosil qiladigan potensial quyidagi ko`rinishda bo`ladi:
+	\begin{equation}
+	\varphi(x,z)=
+	\rho\int\limits_{-a}^{a}dx'
+	\int\limits_{-b\sqrt{1-\frac{x'^{2}}{a^{2}}}}^{b\sqrt{1-\frac{x'^{2}}{a^{2}}}}dz'\ln\frac{1}{(x-x')^{2}+(z-z')^{2}}
+	\label{1}
+	\end{equation}
+	Endi esa, zaryadlar silindrdan tashqarida hosil qilgan maydonning z o`qi bo`yicha tashkil etuvchisini ko`rib chiqamiz:
+	\begin{equation}
+	\frac{x^{2}}{a^{2}}+\frac{z^{2}}{b^{2}}=1+\delta \ \ \ \ \ (0<\delta\ll 1)
+	\label{2}
+	\end{equation}
+	Uni quyidagicha ifodalashimiz mumkin:
+	\begin{equation}
+	E_{1}(x,z)\equiv-\dfrac{\partial\varphi}{\partial z}=\rho\int\limits_{-a}^{a}dx'
+	\int\limits_{-b\sqrt{1-\frac{x'^{2}}{a^{2}}}}^{b\sqrt{1-\frac{x'^{2}}{a^{2}}}}
+	dz'\dfrac{\partial}{\partial z'}
+	\ln{\frac{1}{(x-x')^{2}+(z-z')^{2}}}=
+	\rho\int\limits_{-a}^{a}dx\prime\ln{\frac{(x-x')^{2}+
+			\left(z+b\sqrt{1-\frac{x'^{2}}{a^{2}}}\right)^{2}}{(x-x')^{2}+
+			\left(z-b\sqrt{1-\frac{x'^{2}}{a^{2}}}\right)^{2}}}
+		\label{3}
+	\end{equation}
+	Bu integralni hisoblash uchun yangi o`zgaruvchilar kiritamiz:
+	\begin{equation}
+	x=a\cos\psi,\ \ \ \ \\ x'=a\cos\psi',\ \ \ \ b/a=\varepsilon,\ \ \ \ \\delta+\sin^{2}\psi=\sin^{2}\varphi
+	\label{4} 
+	\end{equation}
+	U holda $\sqrt{1-\frac{x'^{2}}{a^{2}}}=\sin\psi',\ z=b\sin\varphi$ bo`ladi hamda
+	\begin{equation}
+	E_{z}=a\rho\int\limits_{0}^{\pi}
+	\sin\psi' d\psi'
+	\ln\frac{(\cos\psi'-\cos\psi)^{2}+\varepsilon^{2}(\sin\psi'+\sin\varphi)^{2}}
+	{(\cos\psi'-\cos\psi)^{2}+\varepsilon^{2}(\sin\psi'-\sin\varphi)^{2}}
+	=a\rho
+	\int\limits_{0}^{\pi}
+	\sin\psi' d\psi'
+	\ln 
+	\frac{\sin^{2}\frac{\psi'+\psi}{2}\sin^{2}\frac{\psi'-\psi}{2}+
+		\varepsilon^{2}\sin^{2}\frac{\psi'+\varphi}{2}\cos^{2}
+		\frac{\psi'-\varphi}{2}}
+	{\sin^{2}\frac{\psi'+\psi}{2}\sin^{2}\frac{\psi'-\psi}{2}+
+		\varepsilon^{2}\sin^{2}\frac{\psi'+\varphi}{2}\sin^{2}
+		\frac{\psi'-\varphi}{2}}
+	\label{5}
+	\end{equation}
+	$\delta\rightarrow 0$ bo`lganda, $\varphi\rightarrow\psi$. Bu o`tishning uzluksizligidan foydalanib integral ostidagi ifodani quyidagicha yozib olishimiz mumkin:
+	\begin{eqnarray}
+	E_{z}=a\rho\int\limits_{0}^{\pi}
+	\sin\psi' d\psi'
+	\ln
+	\frac{\sin^{2}\frac{\psi+\psi'}{2}\left[
+		\sin^{2}\frac{\psi-\psi'}{2}+
+		\varepsilon^{2}\cos^{2}\frac{\psi-\psi'}{2}
+		\right]}
+	{\sin^{2}\frac{\psi-\psi'}{2}
+	\left[
+	\sin^{2}\frac{\psi+\psi'}{2}+
+	\varepsilon^{2}\cos^{2}\frac{\psi+\psi'}{2}
+	\right]}
+=a\rho\int\limits_{0}^{\pi}
+\sin\varphi d\varphi
+\left[
+\frac{1-\cos(\varphi+\psi)}
+	 {1-\cos(\varphi-\psi)}
+	 \frac{1+\frac{\varepsilon^{2}-1}
+	 {\varepsilon^{2}+1}\cos(\varphi-\psi)}
+ {1+\frac{\varepsilon^{2}-1}
+ 	{\varepsilon^{2}+1}\cos(\varphi+\psi)}	 
+\right]= \\ 
+=a\rho\int\limits_{\pi+\varphi}^{\pi-\varphi}
+\sin(\varphi+\psi)d\varphi\ln
+\frac{1+\frac{\varepsilon^{2}-1}
+	{\varepsilon^{2}+1}\cos\varphi}
+{1-\cos\psi}
++a\rho\int\limits_{\psi}^{\pi+\psi}
+\sin(\varphi-\psi)d\varphi\ln
+\frac{1-\cos\psi}
+{1+\frac{\varepsilon^{2}-1}
+	{\varepsilon^{2}+1}\cos\varphi}
+\label{6}
+	\end{eqnarray}
+	
+Birinchi integralda integrallash o`zgaruvchisini almashtiramiz: $\varphi\prime=\pi-\varphi$. Natijada 
+\begin{equation}
+E_{z}=a\rho\int\limits_{\psi}^{\pi+\psi}
+\sin(\varphi-\psi)d\varphi
+\left[
+\ln
+\frac{1+\frac{\varepsilon^{2}-1}
+	{\varepsilon^{2}+1}\cos\varphi}
+{1-\frac{\varepsilon^{2}-1}
+	{\varepsilon^{2}+1}\cos\varphi}
++\ln
+\frac{1-\cos\varphi}
+	 {1+\cos\varphi}
+\right]
+=a\rho\left[\Phi
+\left(
+\psi,\frac{\varepsilon^{2}-1}
+		  {\varepsilon^{2}+1} 
+\right)
++\Phi(\psi,1)
+\right]
+\label{7}
+\end{equation}	
+	bu yerda
+	\begin{equation}
+	\Phi(\psi,\alpha)=
+	\int\limits_{\psi}^{\pi+\psi}
+	\sin(\varphi-\psi)d\varphi\ln
+	\frac{1-\alpha\cos\varphi}
+		 {1+\alpha\cos\varphi}
+	\label{8}
+	\end{equation}
+	\eqref{8}-integralni bo`laklab integrallash mumkin:
+	\begin{equation}
+	\Phi(\psi,\alpha)=
+	-\cos(\varphi-\psi)\ln
+		\frac{1-\alpha\cos\varphi}
+	{1+\alpha\cos\varphi}
+	\Big |_{\psi}^{\pi+\psi}
+	+2\pi\int\limits_{\psi}^{\pi+\psi}
+	\frac{\cos(\varphi+\psi)\sin\varphi}
+		 {1-\alpha^{2}\cos^{2}\varphi}
+		 +2\alpha\sin\psi\int\limits_{\psi}^{\pi+\psi}
+		 \frac{\sin^{2}\varphi d\varphi}
+		 	  {1-\alpha^{2}\cos^{2}\varphi}
+		 	  \label{9}
+	\end{equation}
+
+	Ko`rinib turibdiki, \eqref{9}-integraldagi birinchi had nolga teng. Ikkinchi hadda integral ostidagi funksiyaning $(0,\psi)$ va $(\pi,\pi+\psi)$
+	 intervallardagi qiymati bir-biriga mos keladi. Natijada, $\Phi(\psi,\alpha)$ ni quyidagi ko`rinishda yozishimiz mumkin:
+	 \begin{equation}
+	 \Phi(\psi,\alpha)=2\alpha\sin\psi\int\limits_{0}^{\pi}\frac{\sin^{2}\varphi d\varphi}{1-\alpha^{2}\cos^{2}\varphi}
+	 \label{10}
+	 \end{equation}
+	$\alpha=1$ hol uchun integral oson hisoblanadi va $2\pi\sin\psi$ ga  teng. $\alpha\ne1$ uchun esa
+	\begin{equation}
+	\Phi(\psi,\alpha)=\frac{2\pi\sin\psi}{\alpha}
+	\left[
+	1-(1-\alpha^{2})
+	\int\limits_{0}^{\pi}\dfrac{d\varphi}{1-\alpha^{2}\cos^{2}\varphi}
+	\right]
+	\label{11}
+	\end{equation}
+	yoki
+	\begin{equation}
+	\Phi(\psi,\alpha)=\frac{2\pi\sin\psi}{\alpha}
+	\left(
+	1-\sqrt{1-\alpha^{2}}
+	\right)
+	\label{12}
+	\end{equation}
+	Shundan so`ng, \eqref{12} ni \eqref{7}-ga qo`yamiz va \eqref{4}-ni hisobga olgan holda, elliptik silindr maydoni uchun quyidagi ifodan yozamiz:
+	\begin{eqnarray}
+	E_{x}(x,z)=4\pi\rho\dfrac{a}{b+a}z
+	\\
+	E_{z}(x,z)=4\pi\rho\dfrac{b}{b+a}x
+	\label{13,14}
+	\end{eqnarray}
+	
+	
+\end{document}
